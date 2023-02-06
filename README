@@ -38,5 +38,7 @@ The response from the chatbot is then wrapped in a ResultModel object and return
 Note
 The ChatGptQuestionController and ResultModel classes are designed to be flexible, so feel free to modify them as needed to meet the specific requirements of your chatbot application.
 
+http://localhost:8080/
+
 saad mchichou
 saad.amachichou@gmail.com
