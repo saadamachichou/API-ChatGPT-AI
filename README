@@ -1,0 +1,41 @@
+Overview
+This code contains two parts, a REST controller named ChatGptQuestionController and a data transfer object (DTO) named ResultModel, for use in a chatbot application.
+
+ChatGptQuestionController
+This REST controller is responsible for handling incoming messages from the chatbot's clients. It contains a single endpoint /send which can be used to send a message to the chatbot. The endpoint uses the ChatgptService to send the message and receives a response. The response is then wrapped in a ResultModel object and returned to the client.
+
+The ChatGptQuestionController class has the following features:
+
+@CrossOrigin and @RestController annotations which enable the class to act as a REST endpoint.
+
+A constructor that takes ChatgptService as a parameter and autowires it.
+
+A sendMessage method that handles incoming messages from the client. The method takes a message and returns a ResultModel object with the chatbot's response.
+
+A saveToCsvFile method that can be used to save the chatbot's input and output to a CSV file.
+
+ResultModel
+The ResultModel class is a data transfer object that is used to encapsulate the response from the chatbot. It contains the following fields:
+
+code: An integer that represents the response code.
+
+message: A string that contains a message describing the response.
+
+data: An object that contains the data associated with the response.
+
+The ResultModel class has the following features:
+
+Two static methods, success and fail, that can be used to create instances of the object with predefined values.
+Steps to use the code
+Ensure that the code is included in the chatbot application's source code.
+
+In the code that implements the chatbot's REST API endpoint, use the ChatGptQuestionController class to handle incoming messages from clients.
+
+When a message is received, pass it to the sendMessage method of the ChatGptQuestionController class. This method will use the ChatgptService to send the message and receive a response.
+
+The response from the chatbot is then wrapped in a ResultModel object and returned to the client.
+
+Note
+The ChatGptQuestionController and ResultModel classes are designed to be flexible, so feel free to modify them as needed to meet the specific requirements of your chatbot application.
+
+saad mchichou
